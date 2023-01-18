@@ -293,11 +293,11 @@ you can choose your favorite.
 <form>
   <div>
     <label for="fullname">Full Name:</label>
-    <input type="text" name="fullname" id="fullname">
+    <input type="text" name="fullname" id="fullname" required>
   </div>
   <div>
     <label for="email">Email</label>
-    <input type="email" name="email" id="email">
+    <input type="email" name="email" id="email" required>
   </div>
   <div>
     <label for="password">Password:</label>
@@ -318,7 +318,7 @@ you can choose your favorite.
   </div>
   <div>
     <label for="religion">Religion:</label>
-    <input type="checkbox" name="islam" id="islam" value="islam"> Islam
+    <input type="checkbox" name="islam" id="islam" value="islam" checked> Islam
     <input type="checkbox" name="cristian" id="cristian" value="cristian"> Cristian
     <input type="checkbox" name="hindu" id="hindu" value="hindu"> Hindu
   </div>
@@ -329,14 +329,38 @@ you can choose your favorite.
 <div>
   <label for="department">Department:</label>
   <select name="department" id="department">
-    <option value="Law">Law</option>
+    <option value="Law" selected>Law</option>
   <option value="English ">English</option>
   <option value="Economics">Economics</option>
   <option value="CSE">CSE</option>
   <option value="EEE">EEE</option>
   </select>
-  
 </div>
+<div>
+  <label for="message">Leave a Message</label> <br>
+  <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+</div>
+<div>
+  <input type="submit" name="submit" id="submit" value="Register">
+  <input type="reset" name="reset" id="reset" value="Clear">
+</div>
+</form>
+<h1>Implement how to send a message</h1>
+<!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xbjelkbn"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label> <br>
+  <label>
+    Your message: <br>
+    <textarea name="message"></textarea>
+  </label> <br>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
 </form>
 </body>
 </html>
